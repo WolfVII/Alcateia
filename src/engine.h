@@ -1,12 +1,17 @@
-#pragma once
+// ======================= engine.h =======================
+#ifndef ENGINE_H
+#define ENGINE_H
+
 #include <windows.h>
 
-class Engine {
-public:
-    Engine();
-    ~Engine();
+namespace Engine {
+    enum Mode { OBJECT_MODE, GAME_MODE };
 
-    bool Initialize(HINSTANCE hInstance, int nCmdShow);
-    void Run();
+    void Init(HWND hwnd);
+    void Update();
+    void Render();
     void Shutdown();
-};
+    LRESULT CALLBACK HandleMessage(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+}
+
+#endif
