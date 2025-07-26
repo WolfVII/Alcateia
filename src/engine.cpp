@@ -1,5 +1,5 @@
 #include "engine.h"
-#include "../renderer/renderer.h"
+#include "renderer.h"
 
 Engine::Engine() {}
 Engine::~Engine() {}
